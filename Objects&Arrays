@@ -1,0 +1,66 @@
+// Way to initialize the object , Argument is must the other ways include new, {} notation as well 
+var x= Object.create(null);
+x.test="Hello";
+
+//Way to parse objects
+
+var book={ author :"sujan", "number of pages" : "100"};
+for(var p in book){
+  console.log(p + book[p]);
+}
+
+// window object is the global object in sevricenow
+//Sparse arrays afford to have the empty spaces
+var myarray=[];
+myarray[0]="test";
+myarray[1]=true;
+myarray[2]=4;
+myarray[10]="hello";
+console.log(myarray);
+
+
+var book={ author :"sujan", "number of pages" : "100"};
+for(var p in book){
+  console.log(p + book[p]);
+}
+global;
+//console.log(global);
+//console.log(window);
+
+
+//arrays
+
+var myarray=[];
+myarray[0]="test";
+myarray[1]=true;
+myarray[2]=4;
+myarray[10]="hello";
+console.log(myarray);
+console.log(myarray["0"]);
+console.log(typeof myarray);
+console.log(myarray instanceof Object);
+console.log(myarray instanceof Array);
+
+console.log(Array);
+
+//iteration over arrays
+
+var arr =[1 ,2, 3];
+arr[10]="hello";
+for(var i=0 ; i<arr.length ;i++){
+
+  console.log(arr[i]);
+}
+
+//Sort Arrays
+
+var a =[2 , 10 ,1 , 0 , 64 ,8 , 6 , 5 , 127];
+console.log(a.sort());
+
+function num_comparator(a, b){
+
+return a-b;
+}
+
+console.log(a.sort(num_comparator));
+
