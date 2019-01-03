@@ -1,0 +1,92 @@
+Functional Programming
+    Variable Scope 
+    Nested Functions 
+    Closure
+    
+  List Comprehension
+      Filter 
+      Map 
+      Reduce 
+      
+      // easy to maintain 
+      //easy to make changes without fearing of breaking some thing
+
+
+//Closure scoping inside a function 
+
+function step_iterate(start, step){
+return function(){
+
+  var res =start;
+  start = start+step;
+  return res;
+}
+
+}
+var numberwith2stepsiterate = step_iterate(0,2);
+console.log(numberwith2stepsiterate());
+console.log(numberwith2stepsiterate());
+console.log(numberwith2stepsiterate());
+console.log(numberwith2stepsiterate());
+console.log(numberwith2stepsiterate());
+
+/// FIlter
+function iseven(elem){
+
+  return elem%2==0;
+}
+// Call back function 
+
+te , index , array are the arguments and the te is the elememt
+
+var x = [ 2, 3, 4, 5 ,6, 7].filter(iseven);
+console.log(x);
+
+var y = [2, 3, 4, 5, 6, 7].filter(function isevn(te, index , array){
+console.log(te +":"+ index + ":"+array);
+return te%2==0;
+
+
+});
+console.log(y);
+
+// Map
+
+
+
+// Input Set is domain 
+
+// Output set is codomain or range 
+
+var x = [3 , 5, 10 , 12 ,24].map(function(elem){
+
+  return elem*elem;
+});
+console.log(x);
+
+call backfunction three arguments elem, index , array returns transformed value 
+
+// reduce 
+
+// To execute on every element of array and reduce to the single element of '
+// array and returns only one element
+
+var x = [ 3, 4 , 5 , 9 ,100].reduce(function(prev , curr , index , array){
+
+  return prev+curr;
+});
+
+console.log(x);
+
+Call back function is different which has prev , curr , index , array
+// Arguments
+function sun(){
+for(var i=0 ; i< arguments.length ; i++){
+
+  console.log(arguments[i]);
+}
+
+}
+sun(1, 2, 3, 4 ,5 );
+
+
